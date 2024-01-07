@@ -1,9 +1,29 @@
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'todolist/index.css' %}">
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8">
     </head>
     <body>
-        Main page
+        <h1><span onmouseenter = "this.style.animationName = 'handshake';  ">👋</span> Welcome back!</h1>
+        <div id = "button-add-board" onclick = "">
+            Create new board
+        </div>
+        <div id = "board-container">
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+            <div class = "board"> Name1</div>
+        </div>
     </body>
 </html>

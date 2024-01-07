@@ -1,9 +1,42 @@
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'todolist/todo.css' %}">
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8">
     </head>
     <body>
-        Todo list
+        <header>
+            <a id = "button-back" href ="{% url 'frontpage' %}"> <img src="{% static 'todolist/img/left.svg' %}" alt="Back"> </a>
+            <h1> <span>Todo List</span> </h1>
+        </header>
+        <div id = "list">
+            <div class = "node">
+                <input type = "checkbox" name = "done" id = "check_[insertnumber]" class = "status">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit felis, ultrices at ipsum eu, pharetra dapibus justo. In hac habitasse platea dictumst. Aenean lobortis lacinia orci et blandit. Mauris arcu mi, ultricies nec quam pharetra, venenatis iaculis est. Mauris malesuada tellus eu erat facilisis, vitae egestas libero mollis. Fusce pretium, sem in eleifend egestas, lectus risus accumsan leo, in tempor urna ex in tellus. Donec in lobortis mauris, nec gravida dui. Morbi pretium dolor ac blandit iaculis. Pellentesque at odio nec augue viverra venenatis at eu mi. Quisque elementum lectus eu urna aliquam, vitae feugiat quam volutpat. Aliquam erat volutpat. Curabitur neque sapien, vehicula quis vestibulum id, lacinia at ligula. Nullam id vehicula tortor. Sed bibendum sed ligula feugiat blandit. Nulla et felis iaculis, tincidunt massa eu, scelerisque leo. Integer tincidunt pulvinar finibus. Donec ipsum elit, consequat quis rutrum nec, dapibus vel enim. Praesent scelerisque fermentum nulla, nec pharetra magna tincidunt in. Maecenas sed ipsum laoreet, sodales enim hendrerit, iaculis quam. Nullam feugiat sed tellus sed elementum. Pellentesque non ultrices odio.</p>
+                <div class = "edit"> <img src="{% static 'todolist/img/edit.svg' %}" alt="Back"> </div>
+                <div class = "delete"> <img src="{% static 'todolist/img/delete.svg' %}" alt="Back"> </div>
+            </div>
+            <div class = "node">
+                <input type = "checkbox" name = "done" id = "check_[insertnumber]" class = "status">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit felis, ultrices at ipsum eu, pharetra dapibus justo. In hac habitasse platea dictumst. Aenean lobortis lacinia orci et blandit. Mauris arcu mi, ultricies nec quam pharetra, venenatis iaculis est. Mauris malesuada tellus eu erat facilisis, vitae egestas libero mollis. Fusce pretium, sem in eleifend egestas, lectus risus accumsan leo, in tempor urna ex in tellus. Donec in lobortis mauris, nec gravida dui. Morbi pretium dolor ac blandit iaculis. Pellentesque at odio nec augue viverra venenatis at eu mi. Quisque elementum lectus eu urna aliquam, vitae feugiat quam volutpat. Aliquam erat volutpat. Curabitur neque sapien, vehicula quis vestibulum id, lacinia at ligula. Nullam id vehicula tortor. Sed bibendum sed ligula feugiat blandit. Nulla et felis iaculis, tincidunt massa eu, scelerisque leo. Integer tincidunt pulvinar finibus. Donec ipsum elit, consequat quis rutrum nec, dapibus vel enim. Praesent scelerisque fermentum nulla, nec pharetra magna tincidunt in. Maecenas sed ipsum laoreet, sodales enim hendrerit, iaculis quam. Nullam feugiat sed tellus sed elementum. Pellentesque non ultrices odio.</p>
+                <div class = "edit"> <img src="{% static 'todolist/img/edit.svg' %}" alt="Back"> </div>
+                <div class = "delete"> <img src="{% static 'todolist/img/delete.svg' %}" alt="Back"> </div>
+            </div>
+            <div class = "node">
+                <input type = "checkbox" name = "done" id = "check_[insertnumber]" class = "status">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit felis, ultrices at ipsum eu, pharetra dapibus justo. In hac habitasse platea dictumst. Aenean lobortis lacinia orci et blandit. Mauris arcu mi, ultricies nec quam pharetra, venenatis iaculis est. Mauris malesuada tellus eu erat facilisis, vitae egestas libero mollis. Fusce pretium, sem in eleifend egestas, lectus risus accumsan leo, in tempor urna ex in tellus. Donec in lobortis mauris, nec gravida dui. Morbi pretium dolor ac blandit iaculis. Pellentesque at odio nec augue viverra venenatis at eu mi. Quisque elementum lectus eu urna aliquam, vitae feugiat quam volutpat. Aliquam erat volutpat. Curabitur neque sapien, vehicula quis vestibulum id, lacinia at ligula. Nullam id vehicula tortor. Sed bibendum sed ligula feugiat blandit. Nulla et felis iaculis, tincidunt massa eu, scelerisque leo. Integer tincidunt pulvinar finibus. Donec ipsum elit, consequat quis rutrum nec, dapibus vel enim. Praesent scelerisque fermentum nulla, nec pharetra magna tincidunt in. Maecenas sed ipsum laoreet, sodales enim hendrerit, iaculis quam. Nullam feugiat sed tellus sed elementum. Pellentesque non ultrices odio.</p>
+                <div class = "edit"> <img src="{% static 'todolist/img/edit.svg' %}" alt="Back"> </div>
+                <div class = "delete"> <img src="{% static 'todolist/img/delete.svg' %}" alt="Back"> </div>
+            </div>
+            <div class = "node">
+                <input type = "checkbox" name = "done" id = "check_[insertnumber]" class = "status">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit felis, ultrices at ipsum eu, pharetra dapibus justo. In hac habitasse platea dictumst. Aenean lobortis lacinia orci et blandit. Mauris arcu mi, ultricies nec quam pharetra, venenatis iaculis est. Mauris malesuada tellus eu erat facilisis, vitae egestas libero mollis. Fusce pretium, sem in eleifend egestas, lectus risus accumsan leo, in tempor urna ex in tellus. Donec in lobortis mauris, nec gravida dui. Morbi pretium dolor ac blandit iaculis. Pellentesque at odio nec augue viverra venenatis at eu mi. Quisque elementum lectus eu urna aliquam, vitae feugiat quam volutpat. Aliquam erat volutpat. Curabitur neque sapien, vehicula quis vestibulum id, lacinia at ligula. Nullam id vehicula tortor. Sed bibendum sed ligula feugiat blandit. Nulla et felis iaculis, tincidunt massa eu, scelerisque leo. Integer tincidunt pulvinar finibus. Donec ipsum elit, consequat quis rutrum nec, dapibus vel enim. Praesent scelerisque fermentum nulla, nec pharetra magna tincidunt in. Maecenas sed ipsum laoreet, sodales enim hendrerit, iaculis quam. Nullam feugiat sed tellus sed elementum. Pellentesque non ultrices odio.</p>
+                <div class = "edit"> <img src="{% static 'todolist/img/edit.svg' %}" alt="Back"> </div>
+                <div class = "delete"> <img src="{% static 'todolist/img/delete.svg' %}" alt="Back"> </div>
+            </div>
+        </div>
     </body>
 </html>
