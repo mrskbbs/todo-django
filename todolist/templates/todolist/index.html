@@ -1,29 +1,46 @@
 {% load static %}
-<link rel = "stylesheet" href = "{% static 'todolist/index.css' %}">
+<link rel = "stylesheet" href = "{% static 'todolist/style/index.css' %}">
+<link rel = "stylesheet" href = "{% static 'todolist/style/universal.css' %}">
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "utf-8">
-    </head>
+    {% if not user %}
+    <form action = "{% url 'todolist:frontpage' %}" method = "post" style = "display: flex;" id = "username">
+        {% csrf_token %}
+        <div>
+            <h1>Your username</h1>
+            <input type = "text" name = "username">
+            <input type = "submit" value = "Submit">
+        </div>
+    </form>
+    {% endif %}
+    <form action = "{% url 'todolist:frontpage' %}" method = "post" style = "display: none;" id = "board_name">
+        {% csrf_token %}
+        <div>
+            <h1>Boards name</h1>
+            <input type = "text" name = "board_name">
+            <input type = "submit" value = "Submit">
+        </div>
+    </form>
     <body>
-        <h1><span onmouseenter = "this.style.animationName = 'handshake';  ">👋</span> Welcome back!</h1>
-        <div id = "button-add-board" onclick = "">
-            Create new board
-        </div>
-        <div id = "board-container">
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-            <div class = "board"> Name1</div>
-        </div>
+        <div id = "wrapper">
+            <h1><span onmouseenter = "this.style.animationName = 'handshake';  ">👋</span> Welcome back, {{user.username}}!</h1>
+            <div id = "boards">
+                <div id = "grid">
+                    {% for board in user.board_set.all %}
+                        <a class = "board" href = "{% url 'todolist:todo' user.username board.name %}">{{board.name}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <input type = "button" value = "Create new board" onclick = "showBoardForm();">
+        </div>    
     </body>
 </html>
+{% if not user %}
+<style>
+    #wrapper{
+        filter: blur(5px);
+    }
+</style>
+{% endif %}
+<script src = "{% static 'todolist/scripts/index.js' %}"></script>

@@ -1,0 +1,73 @@
+html, body{
+    min-height: 100%;
+    overflow: hidden;
+}
+#node_content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgba(0,0,0,45%), rgba(0,0,0,0%));
+    z-index: 2;
+}
+#node_content div{
+    padding: 2em;
+    background-color: white;
+}
+#node_content div h1{
+    margin-block-end: 0.125em;
+}
+#wrapper{
+    filter: blur(0px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: .08s filter linear;
+}
+header{
+    height: 10%;
+    padding-right: 2em;
+    padding-left:  2em;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#nodes{
+    height: 85%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5em;
+    padding-bottom: 6em;
+    gap: .5em;
+}
+.node{
+    height: 10%;
+    width: 75%;
+    padding: 1em;
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.node input[type = text]{
+    width: 90%;
+}
+#nav{
+    position: absolute;
+    bottom: 0%;
+    height: 10%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0), yellowgreen );
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}

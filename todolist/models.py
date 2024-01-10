@@ -1,23 +1,20 @@
 from django.db import models
 
 class User(models.Model):
-    name = models.CharField(max_length = 64)
-    
+    identity = models.CharField(max_length = 64)
+    username = models.CharField(max_length = 30)
     def __str__(self):
-        return self.name
+        return self.username
 
 class Board(models.Model):
-    name = models.CharField(max_length = 150)
+    name = models.CharField(max_length = 50)
     owner = models.ForeignKey(User, on_delete = models.CASCADE)
-    creation_date = models.DateTimeField()
-    
     def __str__(self):
-        return f"{self.name} ; {self.owner}"
+        return f"name: {self.name} ; owner: {self. owner}"
 
 class Node(models.Model):
-    content = models.CharField(max_length = 200)
-    is_done = models.BooleanField()
+    isdone = models.BooleanField()
+    content = models.CharField(max_length = 300)
     board = models.ForeignKey(Board, on_delete = models.CASCADE)
-
     def __str__(self):
-        return self.content
+        return f"board: {self.board.__str__()} ; content: {self.content}"

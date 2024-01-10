@@ -1,0 +1,72 @@
+html, body{
+    min-height: 100%;
+    overflow: hidden;
+}
+#wrapper{
+    filter: blur(0px);
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 2%;
+    gap: 2em;
+    transition: .08s filter linear;
+}
+#boards{
+    height: 75%;
+    width: 100%;
+}
+#grid{
+    overflow-y: auto;
+
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 25%;
+    gap: 1em;
+}
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+}
+form{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgba(0,0,0,45%), rgba(0,0,0,0%));
+    z-index: 2;
+}
+form div{
+    padding: 2em;
+    background-color: white;
+}
+form div h1{
+    margin-block-end: 0.125em;
+}
+span{
+    display: inline-block;
+    transition: .75s cubic-bezier(.17,.67,.1,1.03);
+    animation-name: unset;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+}
+@keyframes handshake {
+    0%{
+        transform: rotate(0deg) translateY(0em);
+    }
+    50%{
+        transform: rotate(45deg)  translateY(-.5em);
+    }
+    100%{
+        transform: rotate(0deg) translateY(0em);
+    }
+}
