@@ -1,7 +1,7 @@
 Todo application written with Django and pure HTML/CSS/JS
 ---------------------------------------------------------
-A simple app that has user authentication tied to IP and addition and removal of boards/nodes
-My main goal with this app was to get a grasp of Django's structure and basic syntax ( That's why the code is reeeally bad c: )
+A simple app that has user authentication tied to IP and addition and removal of boards/nodes. 
+My main goal with this app was to get a grasp of Django's structure and basic syntax. ( That's why the code is reeeally bad c: )
 Overall it's a small pet project with an intention of learning the basics of Django, and I think it fulfiled it's purpose
 
 Screenshots
