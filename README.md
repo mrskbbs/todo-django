@@ -9,7 +9,7 @@ Screenshots
 ![image](https://github.com/mrskbbs/todo-django/assets/117008080/c7108fb8-5a00-449f-b0cd-d8530fcfea93)
 <p align = "center">Frontpage</p>
 
-![image](https://github.com/mrskbbs/todo-django/assets/117008080/63de135d-58b2-4ae9-8a93-f062d5857214)
+![image](https://github.com/mrskbbs/todo-django/assets/117008080/674ac166-9540-4d33-8714-ff1c519c09a3)
 <p align = "center">Board creation menu</p>
 
 ![image](https://github.com/mrskbbs/todo-django/assets/117008080/bdcbbd0d-88cb-4878-bf5c-966ba3c2cfbb)
