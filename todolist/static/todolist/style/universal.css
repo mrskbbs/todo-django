@@ -1,7 +1,105 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("./fonts/Nunito-Regular.ttf");
+}
+::selection{
+    color: white;
+    background-color: #4A5899;
+}
+::-webkit-scrollbar{
+    width: .5em;
+}
+::-webkit-scrollbar-thumb{
+    background-color: white ;
+    border-radius: 2em;
+}
 html, body{
     margin: 0em;
+    font-family: "Nunito";
+    background: linear-gradient(217deg, rgba(175, 146, 255, 0.81), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(96, 200, 241, 0.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, #4A5899, rgba(0,0,255,0) 70.71%);
+    color: white;
 }
 h1{
     margin-block-end: 0em;
     margin-block-start: 0em;
+}
+input[type=text]{
+    color: #4A5899;
+    font-size: 12pt;
+    font-family: "Nunito";
+}
+input[type=checkbox]{
+    accent-color: #4A5899;
+}
+.transpButton{
+    padding: .75em;
+    font-size: 12pt;
+    border-radius: 1em;
+    border: solid .125em rgba(0, 0, 0, 0%);
+    color: #4A5899;
+    background-color: white;
+    transition: .75s cubic-bezier(.17,.67,.1,1.03);
+}       
+.transpButton:hover{
+    border-color: white;
+    border-radius: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0%);
+}
+.transpButton:active{
+    background-color: #95a2db9f;
+}
+.purpleButton{
+    padding: .75em;
+    font-size: 12pt;
+    border-radius: 1em;
+    border: solid .125em rgba(0, 0, 0, 0%);
+    color: white;
+    background-color: #4A5899;
+    transition: .75s cubic-bezier(.17,.67,.1,1.03);
+}       
+.purpleButton:hover{
+    border-color: #4A5899;
+    border-radius: 2em;
+    color: #4A5899;
+    background-color: rgba(0, 0, 0, 0%);
+}
+.purpleButton:active{
+    background-color: #95a2db9f;
+}
+input[type=text]{
+    border: none;
+    border-bottom: solid .025em #4A5899;
+}
+input[type=text]:focus{
+    outline-style: none;
+}
+form div{
+    color: #4A5899;
+    border-radius: 1.5em;
+}
+form div input[type=button], input[type=submit], button{
+    border-color: #4A5899;
+}
+form div input[type=button]:hover, input[type=submit]:hover, button:hover{
+    border-color: white;
+    color: white;
+    background-color: #4A5899;
+}
+a{
+    text-decoration: none;
+    color: #4A5899;
+    background-color: white;
+    border: solid rgba(0, 0, 0, 0%) .15em;
+    border-radius: 1em;
+    transition: .75s cubic-bezier(.17,.67,.1,1.03);
+}
+a:hover{
+    border-color: #4A5899;
+    border-radius: 2em;
+}
+a:active{
+    background-color: #95a2db9f;
 }

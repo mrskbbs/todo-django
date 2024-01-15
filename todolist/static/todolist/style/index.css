@@ -1,6 +1,9 @@
 html, body{
     min-height: 100%;
     overflow: hidden;
+    background: linear-gradient(217deg, rgba(130, 87, 247, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(96, 200, 241, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(250, 137, 61, 0.8), rgba(0,0,255,0) 70.71%);
 }
 #wrapper{
     filter: blur(0px);
@@ -16,10 +19,14 @@ html, body{
 #boards{
     height: 75%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #grid{
     overflow-y: auto;
-
+    padding: 1em;
     height: 100%;
     width: 100%;
     display: grid;
@@ -31,7 +38,6 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: brown;
 }
 form{
     width: 100%;
@@ -45,19 +51,26 @@ form{
     z-index: 2;
 }
 form div{
+    width: 25%;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     background-color: white;
 }
 form div h1{
     margin-block-end: 0.125em;
 }
+#showBoardForm{
+    font-size: 14pt;
+}
 span{
     display: inline-block;
-    transition: .75s cubic-bezier(.17,.67,.1,1.03);
     animation-name: unset;
     animation-duration: 1s;
     animation-delay: 0s;
     animation-iteration-count: 3;
+    transition: .75s cubic-bezier(.17,.67,.1,1.03);
 }
 @keyframes handshake {
     0%{

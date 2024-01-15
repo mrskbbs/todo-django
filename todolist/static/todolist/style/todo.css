@@ -14,7 +14,11 @@ html, body{
     z-index: 2;
 }
 #node_content div{
+    width: 25%;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     background-color: white;
 }
 #node_content div h1{
@@ -31,15 +35,18 @@ header{
     height: 10%;
     padding-right: 2em;
     padding-left:  2em;
-    background-color: yellowgreen;
+    color: white;
+    background-color: #4A5899;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-#nodes{
-    height: 85%;
+#node-wrap{
+    height: 80%;
     overflow-y: auto;
+}
+#nodes{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +58,7 @@ header{
     height: 10%;
     width: 75%;
     padding: 1em;
-    background-color: brown;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -59,13 +66,17 @@ header{
 .node input[type = text]{
     width: 90%;
 }
+.node input[type = checkbox]{
+    width: 1.25em;
+}
 #nav{
     position: absolute;
     bottom: 0%;
     height: 10%;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0), yellowgreen );
+    background: none    ;
     display: flex;
+    border-radius: 0em;
     flex-direction: row;
     justify-content: center;
     align-items: center;

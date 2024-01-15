@@ -4,43 +4,43 @@
 
 <!DOCTYPE html>
 <html>
-    <form method = "post" style = "display: none;" id = "node_content">
+    <form action = "{% url 'todolist:todo' user.username board.name %}" method = "post"  id = "node-list">
         {% csrf_token %}
-        <div>
-            <h1>Nodes content</h1>
-            <input type = "text" name = "content">
-            <input type="checkbox" name = "new" checked style = "display: none;">
-            <input type = "submit" value = "Submit">
+        <div id = "node_content" style="display: none;">
+            <div>
+                <h1>Nodes content</h1>
+                <input type = "text" name = "new_content">
+                <button class = "purpleButton" type = "button" onclick = "createNode();">Submit</button>
+            </div>
         </div>
-    </form>
-    <body>
-        <div id = "wrapper">
-            <header>
-                <h1>Todo</h1>
-                <h1>{{board.name}}</h1>
-                <a href = "{% url 'todolist:frontpage' %}"><button>Leave</button></a>
-            </header>
-            <form method = "post"  id = "node-list">
-                {% csrf_token %}
-                <div id = "nodes">
-                    {% for node in board.node_set.all %}
-                        <div class = "node">
-                            {% if node.isdone == True %} 
-                                <input type = "checkbox" name = "isdone_{{node.id}}" id = "isdone_{{node.id}}" checked>
-                            {% else %}
-                                <input type = "checkbox" name = "isdone_{{node.id}}" id = "isdone_{{node.id}}">
-                            {% endif %}
-                            <input type = "text" name = "content_{{node.id}}" id = "content_{{node.id}}" value = "{{node.content}}">
-                        </div>
-                    {% endfor %}
+        <body>
+            <div id = "wrapper">
+                <header>
+                    <h1>Todo</h1>
+                    <h1>{{board.name}}</h1>
+                    <button class="transpButton" type = "button" onclick = "saveNodes();">Leave</button>
+                </header>
+                <div id = "node-wrap">
+                    <div id = "nodes">
+                        {% for node in board.node_set.all %}
+                            <div class = "node">
+                                {% if node.isdone == True %} 
+                                    <input oninput="console.log('check')" type = "checkbox" name = "isdone_{{node.id}}" id = "isdone_{{node.id}}" checked>
+                                {% else %}
+                                    <input oninput="console.log('check')" type = "checkbox" name = "isdone_{{node.id}}" id = "isdone_{{node.id}}">
+                                {% endif %}
+                                <input oninput="console.log('check')" type = "text" name = "content_{{node.id}}" id = "content_{{node.id}}" value = "{{node.content}}">
+                                <button class = "purpleButton" onclick = "deleteNode(this);" type = "button" id = "deletebutton_{{node.id}}">Delete</button>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div id = "nav">
-                    <input type = "submit" value = "Save">
+                    <button class="transpButton" type = "button" onclick = "showNodeForm();">Create new node</button>
                 </div>
-            </form>
-            <button onclick = "showNodeForm();">Create new node</button>
+            </div>
+        </body>
+    </form>
 
-        </div>
-    </body>
 </html>
 <script src = "{% static 'todolist/scripts/todo.js' %}"></script>
