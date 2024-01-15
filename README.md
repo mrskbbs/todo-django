@@ -7,10 +7,13 @@ Overall it's a small pet project with an intention of learning the basics of Dja
 Screenshots
 -----------
 ![image](https://github.com/mrskbbs/todo-django/assets/117008080/c7108fb8-5a00-449f-b0cd-d8530fcfea93)
-Frontpage
+<p align = "center">Frontpage</p>
+
 ![image](https://github.com/mrskbbs/todo-django/assets/117008080/63de135d-58b2-4ae9-8a93-f062d5857214)
-Board creation menu
+<p align = "center">Board creation menu</p>
+
 ![image](https://github.com/mrskbbs/todo-django/assets/117008080/bdcbbd0d-88cb-4878-bf5c-966ba3c2cfbb)
-Todo list
+<p align = "center">Todo list</p>
+
 ![image](https://github.com/mrskbbs/todo-django/assets/117008080/ef9b0827-144a-44af-a43a-38a015b3663a)
-Node creation menu
+<p align = "center">Node creation menu</p>
